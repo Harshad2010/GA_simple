@@ -1,1 +1,1 @@
-# GA_simple
+# GA_understanding_properly
