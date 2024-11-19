@@ -1,0 +1,32 @@
+name: Python Linting Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # Specify the Python version you need
+
+      # Install flake8 for linting
+      - name: Install flake8
+        run: pip install flake8
+
+      # Run flake8 to lint the Python file
+      - name: Run Python linter
+        run: flake8 main.py  # Replace 'your-file.py' with the target file
