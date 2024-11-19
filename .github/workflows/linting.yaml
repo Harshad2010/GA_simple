@@ -29,4 +29,4 @@ jobs:
 
       # Run flake8 to lint the Python file
       - name: Run Python linter
-        run: flake8 your-file.py  # Replace 'your-file.py' with the target file
+        run: flake8 main.py  # Replace 'your-file.py' with the target file
