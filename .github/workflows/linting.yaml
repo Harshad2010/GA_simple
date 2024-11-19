@@ -29,6 +29,6 @@ jobs:
         
         # Run flake8 to lint the Python file
       - name: Run Python linter
-        run: pylint   # Replace with your target file
+        run: pylint main.py  # Replace with your target file
 
 
