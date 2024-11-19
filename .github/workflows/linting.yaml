@@ -23,12 +23,10 @@ jobs:
         with:
           python-version: '3.x'  # Specify the Python version you need
 
-        # Install pylint for linting
-      - name: Install pylint
-        run: pip install pylint
-        
-        # Run flake8 to lint the Python file
+      # Install flake8 for linting
+      - name: Install flake8
+        run: pip install flake8
+
+      # Run flake8 to lint the Python file
       - name: Run Python linter
-        run: pylint main.py  # Replace with your target file
-
-
+        run: flake8 your-file.py  # Replace 'your-file.py' with the target file
